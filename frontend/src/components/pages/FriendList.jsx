@@ -10,7 +10,7 @@ const FriendList = () => {
   
     }, [])
     const fetchfriends = async () => {
-      await axios.get("https://tutedude-backend-jj38.onrender.com/api/v1/friend-list",  { withCredentials: true }).then((res) => {
+      await axios.get("http://localhost:8080/api/v1/friend-list",  { withCredentials: true }).then((res) => {
         console.log(res);
         setFriends(res.data.friends);
         // console.log(res.data.pendingRequests.length);
@@ -19,7 +19,7 @@ const FriendList = () => {
       })
     }
     const acceptRequest = async (id) => {
-      await axios.put("https://tutedude-backend-jj38.onrender.com/api/v1/accept-req", {id} , { withCredentials: true }).then((res) => {
+      await axios.put("http://localhost:8080/api/v1/accept-req", {id} , { withCredentials: true }).then((res) => {
         console.log(res);
         // console.log(res.data.pendingRequests.length);
       }).catch((err) => {
