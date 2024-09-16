@@ -9,7 +9,7 @@ const HomePage = () => {
     AllUsers();
   }, [])
   const AllUsers = async () => {
-    await axios.get("http://localhost:8080/api/v1/all-users", { withCredentials: true }).then((res) => {
+    await axios.get("https://tutedude-backend-jj38.onrender.com/api/v1/all-users", { withCredentials: true }).then((res) => {
       console.log(res.data.users);
       setUsers(res.data.users);
       // console.log(res.data.pendingRequests.length);
@@ -20,7 +20,7 @@ const HomePage = () => {
 
   const sendRequest = async(id)=>{
     console.log(id)
-    await axios.put("http://localhost:8080/api/v1/send-req",{id}, { withCredentials: true }).then((res) => {
+    await axios.put("https://tutedude-backend-jj38.onrender.com/api/v1/send-req",{id}, { withCredentials: true }).then((res) => {
       console.log(res);
     
       // console.log(res.data.pendingRequests.length);
