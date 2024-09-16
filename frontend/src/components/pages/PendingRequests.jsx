@@ -10,7 +10,7 @@ const PendingRequests = () => {
 
   }, [])
   const pendingReq = async () => {
-    await axios.get("http://localhost:8080/api/v1/pending-req",  { withCredentials: true }).then((res) => {
+    await axios.get("https://tutedude-backend-jj38.onrender.com/api/v1/pending-req",  { withCredentials: true }).then((res) => {
       console.log(res);
       setReq(res.data.pendingRequests);
       // console.log(res.data.pendingRequests.length);
@@ -19,7 +19,7 @@ const PendingRequests = () => {
     })
   }
   const acceptRequest = async (id) => {
-    await axios.put("http://localhost:8080/api/v1/accept-req", {id} , { withCredentials: true }).then((res) => {
+    await axios.put("https://tutedude-backend-jj38.onrender.com/api/v1/accept-req", {id} , { withCredentials: true }).then((res) => {
       console.log(res);
       // console.log(res.data.pendingRequests.length);
     }).catch((err) => {
