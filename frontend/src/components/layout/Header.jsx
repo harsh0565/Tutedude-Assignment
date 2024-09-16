@@ -16,7 +16,7 @@ const Header = () => {
       localStorage.clear();
   
       
-      await axios.delete("http://localhost:8080/api/v1/auth/logout", {
+      await axios.delete("http://localhost:8080https://tutedude-backend-jj38.onrender.com/api/v1/auth/logout", {
         withCredentials: true 
       });
   
