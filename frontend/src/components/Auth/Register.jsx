@@ -24,7 +24,7 @@ const Register = () => {
         console.log("sfdkdf")
         e.preventDefault();
         console.log(user);
-        await axios.post(`http://localhost:8080/api/v1/auth/register`, user).then((res) => {
+        await axios.post(`https://tutedude-backend-jj38.onrender.com/api/v1/auth/register`, user).then((res) => {
             if (res.data.success) {
                 // console.log(res.data.message);
 
