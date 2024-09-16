@@ -28,6 +28,12 @@ app.use("/api/v1/auth" , authRoutes);
 app.use("/api/v1" , friendRoutes);
 
 
+app.get("/",(req,res)=>{
+    res.send({
+        message:"testing phase"
+    })
+})
+
 connectDB();
 
 app.listen(port ,()=>{
