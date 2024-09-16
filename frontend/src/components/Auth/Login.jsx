@@ -22,7 +22,7 @@ const Login = () => {
 
         e.preventDefault();
         console.log(user);
-        await axios.post(`http://localhost:8080/api/v1/auth/login`, user , { withCredentials: true }).then((res) => {
+        await axios.post(`https://tutedude-backend-jj38.onrender.com/api/v1/auth/login`, user , { withCredentials: true }).then((res) => {
             if (res.data.success) {
                 // console.log(res.data.message);
 
