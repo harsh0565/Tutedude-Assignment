@@ -30,7 +30,7 @@
 
 4. **Set up environment variables:**
 
-   Create a `.env` file in the `server` directory with the following content:
+   Create a `.env` file in the `backend` directory with the following content:
 
    ```env
    PORT=8080
